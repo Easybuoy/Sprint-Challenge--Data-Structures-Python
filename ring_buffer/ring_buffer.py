@@ -15,7 +15,9 @@ class RingBuffer:
             else:
                 self.storage[self.current - self.capacity] = item
                 self.current += 1
-            # del self.storage[0]
+            
+        # self.storage = list(filter(None, self.storage))
+
 
     def get(self):
         return self.storage
