@@ -15,25 +15,6 @@ class RingBuffer:
             else:
                 self.storage[self.current - self.capacity] = item
                 self.current += 1
-            
-        
-
 
     def get(self):
         return list(filter(None, self.storage))
-
-
-buffer = RingBuffer(5)
-
-buffer.get()   # should return []
-
-buffer.append('a')
-buffer.append('b')
-buffer.append('c')
-buffer.append('d')
-buffer.append('e')
-buffer.append('f')
-buffer.append('g')
-buffer.append('h')
-buffer.append('i')
-print(buffer.get())   # should return ['a', 'b', 'c']
