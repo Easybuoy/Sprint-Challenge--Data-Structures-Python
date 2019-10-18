@@ -22,8 +22,7 @@ for name_2 in names_2:
     if tree.contains(name_2):
         duplicates.append(name_1)
 
-# Stretch
-# duplicates = set(names_1).intersection(names_2)
+
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
