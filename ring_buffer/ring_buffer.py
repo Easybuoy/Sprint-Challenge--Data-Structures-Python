@@ -16,11 +16,11 @@ class RingBuffer:
                 self.storage[self.current - self.capacity] = item
                 self.current += 1
             
-        # self.storage = list(filter(None, self.storage))
+        
 
 
     def get(self):
-        return self.storage
+        return list(filter(None, self.storage))
 
 
 buffer = RingBuffer(5)
