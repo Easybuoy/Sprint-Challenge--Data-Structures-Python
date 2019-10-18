@@ -1,12 +1,15 @@
 import time
+import os
 
 start_time = time.time()
 
-f = open('names_1.txt', 'r')
+firstPath = os.getcwd()+ '/names/names_1.txt'
+f = open(firstPath, 'r')
 names_1 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-f = open('names_2.txt', 'r')
+secondPath = os.getcwd()+ '/names/names_2.txt'
+f = open(secondPath, 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
