@@ -45,11 +45,20 @@ class LinkedList:
 
     def reverse_list(self):
         # TO BE COMPLETED
-        print(self.head)
-        # if (self.head.value > ):
+
+        if (self.head and self.head.get_next() != None):
+            print(self.head.value)
+            print('aaaaa')
+            print(self.head.get_next())
+            if (self.head.value > self.head.get_next().value):
+              return self.add_to_head(self.head.get_next().value)
+            else:
+              self.head.reverse_list()
+# else:
+#     self.reverse_list()
 
 
-# me = LinkedList()
-# me.add_to_head(1)
-# me.add_to_head(2)
-# me.reverse_list()
+me = LinkedList()
+me.add_to_head(1)
+me.add_to_head(2)
+me.reverse_list()
